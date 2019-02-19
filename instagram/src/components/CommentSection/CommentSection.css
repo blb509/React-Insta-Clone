@@ -1,0 +1,23 @@
+.CommentSection {
+    padding-left: 5px;
+    padding-top: 10px;
+    height: 100%;
+}
+
+.likeIcons {
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.addComment input {
+    text-align: left;
+    width: 100%;
+    border: none;
+}
+
+.comment {
+    display: flex;
+    flex-wrap: wrap;
+}
