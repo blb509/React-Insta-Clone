@@ -11,7 +11,14 @@ const Comments = props => {
         </div>
 
        <div className='addComment'>
-            <input type ="text" name="Comment" placeholder="Add a comment..."></input>
+        <form onSubmit = {props.addNewComment}>
+            <input type ="text"
+                name="comment"
+                placeholder="Add a comment..."
+                value = {props.comment}
+                onChange = {props.handleChanges}
+            />
+        </form>
         </div>
     </div>
 }

@@ -8,14 +8,28 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      dummy: dummyData
+      dummy: [],
+      newPosts: []
     };
   }
+
+  componentWillMount() {
+    this.setState({dummy: dummyData})
+  };
+
+  search = e => {
+    const posts = this.state.dummy.filter(post => {
+      if (post.username.includes(e.target.value)) {
+        return post;
+      }
+    });
+    this.setState({ newPosts: posts });
+  };
 
   render() {
     return (
       <div className="App">
-        <SearchBar/>
+        <SearchBar search={this.search}/>
         <PostContainer dummy={this.state.dummy} />
       </div>
     );

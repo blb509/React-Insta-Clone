@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
-function SearchBar() {
+const SearchBar = props => {
 
     return(
         <div className= "SearchBar">
@@ -11,7 +11,7 @@ function SearchBar() {
                 <img className= "instaName" src= {require(`./IGname.png`)} alt="insta"/>
             </div>
             <div className='form'>
-                <input type ="text" name="Search" placeholder="Search"></input>
+                <input type ="text" placeholder="Search" onKeyDown={props.search}></input>
             </div>
             <div className="icons">
                 <i class="far fa-compass fa-lg"></i>
