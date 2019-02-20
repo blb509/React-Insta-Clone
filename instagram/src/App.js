@@ -23,14 +23,15 @@ class App extends React.Component {
         return post;
       }
     });
-    this.setState({ newPosts: posts });
+    this.setState({newPosts: posts});
   };
 
   render() {
     return (
       <div className="App">
         <SearchBar search={this.search}/>
-        <PostContainer dummy={this.state.dummy} />
+        <PostContainer dummy= 
+        { this.state.newPosts.length > 0 ? this.state.newPosts : this.state.dummy} />
       </div>
     );
   }
