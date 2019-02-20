@@ -2,6 +2,7 @@
     padding-left: 5px;
     padding-top: 10px;
     height: 100%;
+    padding-right: 5px;
 }
 
 .likeIcons {
@@ -15,9 +16,26 @@
     text-align: left;
     width: 100%;
     border: none;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-top: 1px solid lightgray;
+    padding-top: 5px;
+}
+
+input:focus {
+    outline:none;
 }
 
 .comment {
-    display: flex;
+    display: flex; 
+}
+
+.commentUser {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.commentText {
+    display: inline;
     flex-wrap: wrap;
 }
