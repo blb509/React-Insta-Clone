@@ -2,10 +2,13 @@ import React from 'react';
 import './Login.css';
 
 class Login extends React.Component {
-  state = {
-    username: '',
-    password: ''
-  };
+    constructor() {
+        super();
+        this.state = {
+            username: '',
+            password: ''
+        };
+    }
 
   handleChanges = e => this.setState({ [e.target.name]: e.target.value });
 
@@ -18,10 +21,8 @@ class Login extends React.Component {
   render() {
     return (
     <form>
-        {'username'}
-        <input type="text" name="username" value={this.state.username} onChange={handleChanges}/>
-        {'password'}
-        <input type="text" name="password" value={this.state.password} onChange={handleChanges}/>
+        <input type="text" name="username" value={this.state.username} onChange={this.handleChanges}/>
+        <input type="text" name="password" value={this.state.password} onChange={this.handleChanges}/>
         <input type="button" onClick={this.signIn}/>
     </form>
     );
