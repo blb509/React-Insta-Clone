@@ -20,10 +20,12 @@ class Login extends React.Component {
 
   render() {
     return (
-    <form>
+    <form className="loginForm">
+        <p>Username</p>
         <input type="text" name="username" value={this.state.username} onChange={this.handleChanges}/>
+        <p>Password</p>
         <input type="text" name="password" value={this.state.password} onChange={this.handleChanges}/>
-        <input type="button" onClick={this.signIn}/>
+        <input  className="loginButton" type="button" onClick={this.signIn} value="Login"/>
     </form>
     );
   }

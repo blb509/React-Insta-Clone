@@ -10,11 +10,9 @@ const Authenticate = App => Login =>
       }
 
       componentDidMount() {
-        if (localStorage.getItem('user') === null) {
-          this.setState({ loggedIn: false });
-        } else {
+        if (localStorage.getItem('user')) {
           this.setState({ loggedIn: true });
-        }
+        } 
       }
 
       render() {
